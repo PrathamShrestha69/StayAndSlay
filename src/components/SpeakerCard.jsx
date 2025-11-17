@@ -9,7 +9,7 @@ const SpeakerCard = ({
   insta = "https://instagram.com",
 }) => {
   return (
-    <article className="border border-r-4 border-b-4 xl:px-4 px-6 rounded-2xl overflow-hidden flex flex-col h-96 w-64 items-center">
+    <article className="border border-r-4 border-b-4 xl:px-4 px-6 rounded-2xl overflow-hidden flex flex-col h-auto w-64 items-center">
       <div className="shrink-0  flex items-center justify-center pt-4">
         <img
           className="w-full border-r-4 border-b-4 max-w-xs h-40 sm:h-44 object-cover rounded-lg border"

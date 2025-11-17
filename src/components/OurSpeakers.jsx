@@ -47,7 +47,7 @@ const OurSpeakers = () => {
     },
     {
       name: "Himanshu Pokharel",
-      desc: "Entrepreneur",
+      desc: "Entrepreuner and Investor with 6 years of experience excelling in implementing innovative business strategies and mastering multiple skills.",
       img: "/himanshu.jpg",
       insta: "https://www.instagram.com/himanshu_pokharel/",
     },
@@ -59,7 +59,7 @@ const OurSpeakers = () => {
         <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold mb-4 bg-gradient-to-r from-indigo-500 via-pink-500 to-yellow-400 bg-clip-text text-transparent">
           Our Speakers!!
         </h1>
-        <p className="text-sm sm:text-base text-gray-600 max-w-3xl mx-auto">
+        <p className="text-sm sm:text-base max-w-3xl mx-auto">
           Meet the experts and guests who will share insights, stories, and
           practical tips to help build your dreams.
         </p>

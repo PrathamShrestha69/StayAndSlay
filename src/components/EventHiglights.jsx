@@ -23,7 +23,7 @@ const EventHiglights = () => {
       opacity: 0,
       duration: 1.6,
       ease: "power4.out",
-
+      delay:0.5,
       scrollTrigger: {
         trigger: "#text1",
         start: "top 60%",

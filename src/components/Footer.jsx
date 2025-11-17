@@ -44,7 +44,7 @@ const Footer = () => {
         <div className="text-xl font-extrabold mt-2"><Link to="./admin">See you all there!</Link></div>
       </div>
       <div className='line-through'>
-        Made by <span ><a href='https://www.instagram.com/pratham_shrestha69?igsh=MXN3NjEycWUybWcwZA=='>Pratham Shrestha</a></span> 
+         <span ><a href='https://www.instagram.com/pratham_shrestha69?igsh=MXN3NjEycWUybWcwZA=='>Made by @Pratham Shrestha</a></span> 
       </div>
     </footer>
   )
