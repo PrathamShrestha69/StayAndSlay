@@ -10,7 +10,7 @@ const OurSpeakers = () => {
       opacity: 0,
       duration: 1.6,
       ease: "power4.out",
-      
+
       scrollTrigger: {
         trigger: "#text",
         start: "top 60%",
@@ -23,14 +23,14 @@ const OurSpeakers = () => {
       y: 100,
       opacity: 0,
       duration: 1.6,
-      delay:0.2,
+      delay: 0.2,
       ease: "power4.out",
       stagger: 0.2,
       scrollTrigger: {
         trigger: "#text",
         start: "top 40%",
         end: "bottom 20%",
-        scrub: true, 
+        scrub: true,
         stagger: 0.2,
       },
     });
@@ -49,12 +49,6 @@ const OurSpeakers = () => {
       img: "/himanshu.jpg",
       insta: "https://www.instagram.com/himanshu_pokharel/",
     },
-    {
-      name: "Rajan Thapa",
-      desc: "Startup advisor and angel investor with a passion for youth entrepreneurship.",
-      img: "/rajan.jpg",
-      insta: "https://instagram.com/rajan",
-    },
   ];
 
   return (
@@ -71,7 +65,7 @@ const OurSpeakers = () => {
 
       <div
         id="card"
-        className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
+        className="mt-15 flex flex-row items-center justify-between gap-6"
       >
         {speakers.map((s, idx) => (
           <SpeakerCard
