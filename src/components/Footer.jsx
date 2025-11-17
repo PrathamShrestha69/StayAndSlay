@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router'
 
 const venue = 'Himalayan Restro and Events Pvt Ltd'
 const eventDate = 'Dec 1, 2025'
@@ -8,9 +9,9 @@ const Footer = () => {
   const year = new Date().getFullYear()
 
   return (
-    <footer className="bg-base-200 text-center py-4">
-      <div className="max-w-6xl mx-auto text-sm text-gray-600 flex flex-col sm:flex-row items-center justify-between gap-2 px-4">
-        <div>© {year} Stay & Saly — All rights reserved.</div>
+    <footer className="bg-base-200 text-center py-4 px-5">
+      <div className="max-w-6xl mx-auto text-sm flex flex-col sm:flex-row items-center justify-between gap-2 px-4">
+        <div>© {year} StayAndSaly — All rights reserved.</div>
 
         <div>
           <strong className="mr-1">Venue:</strong>
@@ -40,7 +41,7 @@ const Footer = () => {
           />
         </div>
 
-        <div className="text-sm text-gray-600 mt-2">See you all there!</div>
+        <div className="text-xl font-extrabold mt-2"><Link to="./admin">See you all there!</Link></div>
       </div>
     </footer>
   )

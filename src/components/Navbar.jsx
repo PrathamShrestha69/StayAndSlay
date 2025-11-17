@@ -1,18 +1,74 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router";
 
+const LIGHT_LOGO = "/logo-light.png";
+const DARK_LOGO = "/logo-dark.png";
+
 const Navbar = () => {
+  const getTheme = () => {
+    const dt = document.documentElement.getAttribute("data-theme");
+    if (dt) return dt;
+    return document.documentElement.classList.contains("dark")
+      ? "dark"
+      : "retro";
+  };
+
+  const [theme, setTheme] = useState(
+    typeof document !== "undefined" ? getTheme() : "retro"
+  );
+
+  useEffect(() => {
+    const obs = new MutationObserver(() => setTheme(getTheme()));
+    obs.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["data-theme", "class"],
+    });
+
+    const saved = localStorage.getItem("site-theme");
+    if (saved) {
+      document.documentElement.setAttribute("data-theme", saved);
+      setTheme(saved);
+    }
+
+    return () => obs.disconnect();
+  }, []);
+
+  const logoSrc = theme === "dark" ? DARK_LOGO : LIGHT_LOGO;
+
+  const toggleTheme = (next) => {
+    const newTheme = next || (theme === "dark" ? "retro" : "dark");
+    document.documentElement.setAttribute("data-theme", newTheme);
+    // also toggle `dark` class for setups relying on class
+    if (newTheme === "dark") document.documentElement.classList.add("dark");
+    else document.documentElement.classList.remove("dark");
+    localStorage.setItem("site-theme", newTheme);
+    setTheme(newTheme);
+  };
+
   return (
-    <div className="flex flex-row items-center justify-between h-16  px-11 gap-3">
-      <h1 className="font-extrabold font-stretch-50% font-3xl">
-        <Link to="/">Stay AND Slay</Link>
+    <div className="flex flex-row items-center justify-between h-16  px-6 gap-3">
+      <h1 className="font-extrabold text-xl">
+        <Link to="/" className="inline-flex items-center gap-3">
+          <img src={logoSrc} alt="Stay & Saly" className="h-16 w-auto" />
+        </Link>
       </h1>
+
       <div className="flex flex-row items-center gap-5 ">
-        <button className="btn btn-large btn-accent rounded-2xl hidden sm:inline-flex">
-         <Link to="/register">Register Here</Link> 
-        </button>
+        <Link
+          to="/register"
+          className="btn btn-large btn-accent rounded-2xl hidden sm:inline-flex"
+        >
+          Register Here
+        </Link>
+
         <label className="toggle text-base-content">
-          <input type="checkbox" value="coffee" className="theme-controller" />
+          <input
+            type="checkbox"
+            value="coffee"
+            className="theme-controller"
+            onChange={(e) => toggleTheme()}
+            checked={theme === "dark"}
+          />
 
           <svg
             aria-label="sun"

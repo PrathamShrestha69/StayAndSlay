@@ -2,3 +2,8 @@
 @plugin "daisyui" {
   themes: all
 }
+
+/* Prevent horizontal overflow on small screens (hides accidental right-side gap) */
+html, body {
+  overflow-x: hidden;
+}
