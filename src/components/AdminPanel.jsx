@@ -11,7 +11,7 @@ const AdminPanel = () => {
     setLoading(true);
     setError(null);
     try {
-      const res = await axios.get("http://localhost:3000/api/getData");
+      const res = await axios.get("https://stay-and-slay-backend.vercel.app/api/getData");
       const data = res.data;
       setRows(Array.isArray(data) ? data : []);
     } catch (err) {

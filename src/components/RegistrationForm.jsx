@@ -25,7 +25,7 @@ const RegistrationForm = () => {
     setStatus(null);
     try {
       const res = await axios.post(
-        "http://localhost:3000/api/formData",
+        "https://stay-and-slay-backend.vercel.app/api/formData",
         values
       );
       setStatus({
