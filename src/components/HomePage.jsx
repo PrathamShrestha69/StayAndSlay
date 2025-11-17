@@ -5,28 +5,27 @@ import SponserCarousel from "./SponserCarousel";
 import { useGSAP } from "@gsap/react";
 import { SplitText } from "gsap/all";
 import gsap from "gsap";
+import EventHiglights from "./EventHiglights";
 
 const LIGHT_LOGO = "/logo-light.png";
 const DARK_LOGO = "/logo-dark.png";
 
 const HomePage = () => {
+  useGSAP(() => {
+    const paragraphSplit = new SplitText("#para", { type: "lines" });
 
-  useGSAP(()=>{
-    const paragraphSplit = new SplitText("#para",{type:"lines"});
+    gsap.from(paragraphSplit.lines, {
+      y: 100,
+      opacity: 0,
+      duration: 1,
+      ease: "power4.out",
+      stagger: 0.2,
+    });
 
-    gsap.from(paragraphSplit.lines,{
-      y:100,
-      opacity:0,
-      duration:1,
-      ease:"power4.out",
-      stagger:0.2,
-  })
-
-  gsap.from("#logo",{
-    scale:0,
-  })
-  })
-
+    gsap.from("#logo", {
+      scale: 0,
+    });
+  });
 
   const getTheme = () => {
     const dt = document.documentElement.getAttribute("data-theme");
@@ -57,17 +56,22 @@ const HomePage = () => {
 
   return (
     <div className="flex flex-col p-10 lg:p-6 text-center items-center gap-6 max-w-4xl mx-auto">
-      <img id="logo" src={logoSrc} alt="logo" className="h-40 sm:h-96 w-auto" />
-      <p id="para" className="text-xl">
-        “Stay & Slay: Build Your Dreams in Nepal” is a student led event focused on SDG 8 "Decent Work and Economic Growth" which will help for youth career development in Nepal. Our event focuses on providing insights from our guests about decent work and economic growth with a little
-twist of fun workshops filled with different business ideas qnas and a
-        lot of different activities.
+      <img id="logo" src={logoSrc} alt="logo" className="h-40 lg:h-72 w-auto" />
+      <p id="para" className="text-md lg:text-xl">
+      Stay & Slay is a workshop where young minds create, pitch, and build their dreams. An inspiring youth-led event designed to change the narrative that success requires leaving the country.
+
+      This program brings together students, entrepreneurs, and industry professionals to explore real opportunities within the country. Through motivational talks, a hands-on business idea workshop, and interactive pitch sessions, participants learn how creativity, skills, and determination can shape a meaningful future here at home.
+
+      Stay & Slay empowers young Nepalis to dream boldly, build locally, and contribute to a stronger, self-reliant Nepal.
       </p>
-       <Link to="/register"><button className="btn btn-small btn-accent rounded-2xl mx-auto">
-       Registration Open Now!!
-      </button></Link>
-    <OurSpeakers />
-    <SponserCarousel/>
+      <Link to="/register">
+        <button className="btn btn-small btn-accent rounded-2xl mx-auto">
+          Registration Open Now!!
+        </button>
+      </Link>
+      <EventHiglights/>
+      <OurSpeakers />
+      <SponserCarousel />
     </div>
   );
 };

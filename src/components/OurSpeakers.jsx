@@ -17,6 +17,7 @@ const OurSpeakers = () => {
         end: "bottom 20%",
         scrub: true,
         stagger: 0.2,
+        // markers: true,
       },
     });
     gsap.from("#card", {
@@ -32,6 +33,7 @@ const OurSpeakers = () => {
         end: "bottom 20%",
         scrub: true,
         stagger: 0.2,
+        // markers: true,
       },
     });
   });
