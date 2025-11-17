@@ -69,11 +69,14 @@ const HomePage = () => {
         dream boldly, build locally, and contribute to a stronger, self-reliant
         Nepal.
       </p>
-      <Link to="/register">
-        <button className="btn btn-small btn-accent rounded-2xl mx-auto border-b-4 border-r-4 hover:scale-105 transition-transform duration-200 border-blue-700">
-          Registration Open Now!!
-        </button>
-      </Link>
+      <div className="flex flex-row gap-1">
+        <img src="./image.png" alt="img" className="h-15 w-15" />
+        <Link to="/register" className="py-9">
+          <button className="btn btn-small btn-accent mx-auto border-b-4 border-r-4 hover:scale-105 transition-transform duration-200">
+            Registration Open Now!!
+          </button>
+        </Link>
+      </div>
       <EventHiglights />
       <OurSpeakers />
       <SponserCarousel />

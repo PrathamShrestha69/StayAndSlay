@@ -56,7 +56,7 @@ const Navbar = () => {
       <div className="flex flex-row items-center gap-5 ">
         <Link
           to="/register"
-          className="btn btn-large btn-accent rounded-2xl hidden sm:inline-flex border-b-4 border-r-4 hover:scale-105 transition-transform duration-200 border-blue-700"
+          className="btn btn-large btn-accent hidden sm:inline-flex border-b-4 border-r-4 hover:scale-105 transition-transform duration-200 "
         >
           Register Here
         </Link>
