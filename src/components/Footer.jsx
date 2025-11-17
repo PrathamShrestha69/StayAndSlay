@@ -29,7 +29,7 @@ const Footer = () => {
 
       {/* Live map embed (hidden on very small screens) */}
       <div className="max-w-6xl mx-auto px-4 mt-4 block">
-        <div className="w-full h-48 sm:h-56 overflow-hidden rounded-lg border">
+        <div className="w-full h-48 sm:h-56 overflow-hidden rounded-lg border border-b-4 border-r-4 ">
           <iframe
             title="Event location map"
             src="https://www.google.com/maps?q=Himalayan+Restro+and+Events+Pvt+Ltd+Hattisar+Kathmandu&output=embed"

@@ -58,18 +58,23 @@ const HomePage = () => {
     <div className="flex flex-col p-10 lg:p-6 text-center items-center gap-6 max-w-4xl mx-auto">
       <img id="logo" src={logoSrc} alt="logo" className="h-40 lg:h-72 w-auto" />
       <p id="para" className="text-md lg:text-xl">
-      Stay & Slay is a workshop where young minds create, pitch, and build their dreams. An inspiring youth-led event designed to change the narrative that success requires leaving the country.
-
-      This program brings together students, entrepreneurs, and industry professionals to explore real opportunities within the country. Through motivational talks, a hands-on business idea workshop, and interactive pitch sessions, participants learn how creativity, skills, and determination can shape a meaningful future here at home.
-
-      Stay & Slay empowers young Nepalis to dream boldly, build locally, and contribute to a stronger, self-reliant Nepal.
+        Stay & Slay is a workshop where young minds create, pitch, and build
+        their dreams. An inspiring youth-led event designed to change the
+        narrative that success requires leaving the country. This program brings
+        together students, entrepreneurs, and industry professionals to explore
+        real opportunities within the country. Through motivational talks, a
+        hands-on business idea workshop, and interactive pitch sessions,
+        participants learn how creativity, skills, and determination can shape a
+        meaningful future here at home. Stay & Slay empowers young Nepalis to
+        dream boldly, build locally, and contribute to a stronger, self-reliant
+        Nepal.
       </p>
       <Link to="/register">
-        <button className="btn btn-small btn-accent rounded-2xl mx-auto">
+        <button className="btn btn-small btn-accent rounded-2xl mx-auto border-b-4 border-r-4 hover:scale-105 transition-transform duration-200 border-blue-700">
           Registration Open Now!!
         </button>
       </Link>
-      <EventHiglights/>
+      <EventHiglights />
       <OurSpeakers />
       <SponserCarousel />
     </div>
