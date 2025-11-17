@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router'
 
 const venue = 'Himalayan Restro and Events Pvt Ltd'
-const eventDate = 'Dec 1, 2025'
+const eventDate = 'Monday Dec 1, 2025'
 const location = 'Hattisar, Kathmandu, Nepal'
 
 const Footer = () => {
