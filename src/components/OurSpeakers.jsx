@@ -65,7 +65,7 @@ const OurSpeakers = () => {
 
       <div
         id="card"
-        className="mt-15 flex flex-row items-center justify-between gap-6"
+        className="mt-15 flex flex-col lg:flex lg:flex-row items-center justify-between gap-6"
       >
         {speakers.map((s, idx) => (
           <SpeakerCard
