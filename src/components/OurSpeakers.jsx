@@ -46,10 +46,10 @@ const OurSpeakers = () => {
       insta: "https://www.instagram.com/prasannamanandhar/",
     },
     {
-      name: "Himanshu Pokharel",
-      desc: "Entrepreuner and Investor with 6 years of experience excelling in implementing innovative business strategies and mastering multiple skills.",
-      img: "/himanshu.jpg",
-      insta: "https://www.instagram.com/himanshu_pokharel/",
+      name: "Aashish Adhikari",
+      desc: "CEO and Founder of Parayati Investment Pvt. Ltd.",
+      img: "/ashish.jpeg",
+      insta: "https://www.instagram.com/nepalipiedpiper/",
     },
   ];
 
