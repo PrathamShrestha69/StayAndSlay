@@ -59,14 +59,14 @@ const EventHiglights = () => {
                   "Fun Games, Gifts and Activities",
                   "Panel Discussion & Motivational Speeches",
                   "Business Idea Workshop",
-                  "One-Minute Business Pitch Battle",
+                  
                   "Live Q&A with Guests",
-                  "Networking session and Lunch",
+                  "Networking session and high tea",
                   "Closing Performances",
                 ];
 
                 const attractions = [
-                  "Special Guest Speaker(s)",
+                  ,
                   "Real Success Stories from Nepal",
                   "Youth-Centered Career Guidance",
                   "Inspiring Journey & Mindset Talks",
